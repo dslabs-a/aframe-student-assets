@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>A-Frame Logo</title>
+    <meta name="description" content="A-Frame Logo - A-Frame" />
+    <script src="https://aframe.io/releases/1.8.0/aframe.min.js"></script>
+    <script src="https://unpkg.com/aframe-event-set-component@5.x.x/dist/aframe-event-set-component.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/c-frame/aframe-extras@7.7.0/dist/aframe-extras.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/aframevr/aframe@gh-pages/examples/js/remix-dropdown.js"></script>
+  </head>
+  <body>
+    <a-scene
+      background="color: #24CAFF"
+      keyboard-shortcuts=""
+      screenshot=""
+      xr-mode-ui=""
+      device-orientation-permission-ui=""
+    >
+      <!-- Images and 3D models will be referenced here -->
+      <a-assets> </a-assets>
+
+      <a-entity
+        gltf-model="https://cdn.jsdelivr.net/gh/dslabs-a/aframe-student-assets@main/gltf1/Bush_1_A_Color1.gltf"
+        position="-0.801 0.693 2.883"
+        id="ID TAG"
+      >
+      </a-entity>
+
+      <a-entity
+        gltf-model="https://cdn.jsdelivr.net/gh/dslabs-a/aframe-student-assets@main/gltf1/Bush_2_B_Color1.gltf"
+        position="-1.91 0 1.215"
+      >
+      </a-entity>
+
+      <a-entity
+        gltf-model="https://cdn.jsdelivr.net/gh/dslabs-a/aframe-student-assets@main/gltf1/Rock_2_H_Color1.gltf"
+        position="-1.91 0 1.215"
+      >
+      </a-entity>
+
+      <a-entity
+        gltf-model="https://cdn.jsdelivr.net/gh/dslabs-a/aframe-student-assets@main/gltf/objects_gltf/castle.gltf.glb"
+        position="3.2 -0.092 1.215"
+      >
+      </a-entity>
+
+      <a-entity
+        fbx-model="src: https://cdn.jsdelivr.net/gh/dslabs-a/aframe-student-assets@main/LowPoly_Enviro_Pack/Bush_1.fbx"
+        position="0 0 -3"
+        scale="0.03 0.03 0.03"
+      >
+      </a-entity>
+
+      <a-text
+        id="world-title"
+        value="Clean Water for Everyone"
+        color="#111111"
+        width="5"
+        position="-2 3 -4"
+      >
+      </a-text>
+
+      <!-- Ground -->
+      <a-plane
+        id="ground"
+        position="0 0 -5"
+        rotation="-90 0 0"
+        width="20"
+        height="20"
+        color="#7BC96F"
+      >
+      </a-plane>
+
+      <!-- Vertical plane for a future image or poster -->
+      <a-plane
+        id="poster-plane"
+        src="https://cdn.jsdelivr.net/gh/dslabs-a/aframe-student-assets@main/aframe images/simran_poster.png"
+        position="0 1.6 -4"
+        width="2"
+        height="1.5"
+        color="#FFFFFF"
+      >
+      </a-plane>
+
+      <!-- Sample primitives -->
+      <a-box id="sample-box" position="-2 0.5 -4" color="#EF2D5E"> </a-box>
+
+      <a-sphere id="sample-sphere" position="2 1 -4" radius="1" color="#FFC65D">
+      </a-sphere>
+
+      <a-cylinder
+        id="sample-cylinder"
+        position="0 0.75 -6"
+        radius="0.5"
+        height="1.5"
+        color="#39BB82"
+      >
+      </a-cylinder>
+
+      <!-- Camera and VR controls -->
+      <a-entity id="camera-rig">
+        <a-camera position="0 1.6 5.68963924729104"> </a-camera>
+      </a-entity>
+
+      <!-- Lighting -->
+      <a-light
+        type="directional"
+        color="#FFFFFF"
+        intensity="1"
+        position="4 5 2"
+      >
+      </a-light>
+
+      <a-light type="ambient" color="#FFFFFF" intensity="0.6"> </a-light>
+    </a-scene>
+  </body>
+</html>
