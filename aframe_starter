@@ -8,7 +8,8 @@
     <script src="https://unpkg.com/aframe-event-set-component@5.x.x/dist/aframe-event-set-component.min.js"></script>
     <script src="https://cdn.jsdelivr.net/gh/c-frame/aframe-extras@7.7.0/dist/aframe-extras.min.js"></script>
     <script src="https://cdn.jsdelivr.net/gh/aframevr/aframe@gh-pages/examples/js/remix-dropdown.js"></script>
-  </head>
+    <script src="https://cdn.jsdelivr.net/npm/@c-frame/aframe-physics-system@4.2.4/dist/aframe-physics-system.min.js"></script>  
+</head>
   <body>
     <a-scene
       background="color: #24CAFF"
@@ -98,20 +99,18 @@
       >
       </a-cylinder>
 
+      <!-- SIMPLE FIRST-PERSON MOVEMENT -->
       <a-entity
-      id="player"
-      position="0 0 5"
-      movement-controls="speed: 0.5"
-      geometry="primitive: cylinder; radius: 0.4; height: 1.6"
-      material="opacity: 0; transparent: true"
-      dynamic-body="mass: 0; shape: cylinder"
-    >
-      <a-camera
-        id="player-camera"
-        position="0 1.6 0"
-        look-controls
-      ></a-camera>
-    </a-entity>
+        id="player"
+        position="0 0 5"
+        movement-controls="speed: 0.3"
+      >
+        <a-camera
+          id="player-camera"
+          position="0 1.6 0"
+          look-controls
+        ></a-camera>
+      </a-entity>
 
       <!-- Lighting -->
       <a-light
