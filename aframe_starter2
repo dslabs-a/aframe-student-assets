@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>A-Frame Logo</title>
+    <meta name="description" content="A-Frame Logo - A-Frame" />
+    <script src="https://aframe.io/releases/1.8.0/aframe.min.js"></script>
+    <script src="https://unpkg.com/aframe-event-set-component@5.x.x/dist/aframe-event-set-component.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/c-frame/aframe-extras@7.7.0/dist/aframe-extras.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/aframevr/aframe@gh-pages/examples/js/remix-dropdown.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@c-frame/aframe-physics-system@4.2.4/dist/aframe-physics-system.min.js"></script>
+  </head>
+  <body>
+    <a-scene
+      background="color: #FFFFFF"
+      keyboard-shortcuts=""
+      screenshot=""
+      xr-mode-ui=""
+      device-orientation-permission-ui=""
+    >
+      <a-entity
+        id="fir-tree-1"
+        static-body
+        gltf-model="https://cdn.jsdelivr.net/gh/dslabs-a/aframe-student-assets@main/gltf1/Bush_3_B_Color1.gltf"
+        position="-4.606 0.922 -4.972"
+      >
+      </a-entity>
+
+      <a-entity
+        id="mtn-1"
+        fbx-model="src: https://cdn.jsdelivr.net/gh/dslabs-a/aframe-student-assets@main/FIshes_Itchio_2026/Coryphaena_hippurus/Coryphaena_hippurus.fbx"
+        material=""
+        visible="false"
+      >
+      </a-entity>
+
+      <!-- SIMPLE FIRST-PERSON MOVEMENT -->
+      <a-entity id="player" position="0 0 5" movement-controls="speed: 0.3">
+        <a-camera
+          id="player-camera"
+          position="0 1.6 0"
+          look-controls
+        ></a-camera>
+      </a-entity>
+
+      <a-box
+        id="sample-box"
+        position="-2 1.322 -4"
+        color="#EF2D5E"
+        material="opacity: 0.52; color: #1b26c5"
+        scale="9.018 5.015 9.915"
+        visible="false"
+      >
+      </a-box
+      ><a-box
+        id="sample-box-2"
+        position="-2 2.217 -4"
+        color="#EF2D5E"
+        material="opacity: 0.52; color: #1b26c5"
+        scale="9.018 2.971 9.915"
+        visible="false"
+      >
+      </a-box>
+
+      <a-plane
+        static-body
+        width="2"
+        height="1.5"
+        color="#FFFFFF"
+        rotation="270 0 0"
+        scale="50 50 50"
+      >
+      </a-plane>
+
+      <!-- Lighting -->
+      <a-light
+        type="directional"
+        color="#FFFFFF"
+        intensity="1"
+        position="4 5 2"
+      >
+      </a-light>
+
+      <a-light type="ambient" color="#FFFFFF" intensity="0.6"> </a-light>
+
+      <a-entity grid="size: 10; divisions: 10; color: #ccc;"></a-entity>
+    </a-scene>
+  </body>
+</html>
